@@ -1,10 +1,10 @@
-package com.Livraria.Livros;
+package com.generation.farmacia;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 
 @SpringBootTest
-class LivrosApplicationTests {
+class FarmaciaApplicationTests {
 
 	@Test
 	void contextLoads() {

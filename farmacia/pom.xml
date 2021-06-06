@@ -8,11 +8,11 @@
 		<version>2.5.0</version>
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
-	<groupId>com.Livraria</groupId>
-	<artifactId>Livros</artifactId>
+	<groupId>com.generation</groupId>
+	<artifactId>farmacia</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<name>Livros</name>
-	<description>Exercicio opcional</description>
+	<name>farmacia</name>
+	<description>exercicio opcional</description>
 	<properties>
 		<java.version>11</java.version>
 	</properties>
