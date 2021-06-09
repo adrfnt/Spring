@@ -22,39 +22,34 @@ import com.generation.farmacia.repository.CategoriaRepository;
 @RequestMapping
 @CrossOrigin("*")
 public class CategoriaController {
-	
-		
-		@Autowired
-		private CategoriaRepository repository;
-		
-		
-		@GetMapping
-		public ResponseEntity<List<Categoria>> getAll (){
-			return ResponseEntity.ok(repository.findAll());
-		}
-		
-	
-		@GetMapping ("/{id}")
-		public ResponseEntity<Categoria> getById (@PathVariable long id){
-			return repository.findById(id).map(resposta -> ResponseEntity.ok(resposta))
-					.orElse(ResponseEntity.notFound().build());
-		}
-		
-		
-		@PostMapping
-		public ResponseEntity<Categoria> post (@RequestBody Categoria categoria){
-			return ResponseEntity.status(HttpStatus.CREATED).body(repository.save(categoria));
-		}
-		
-		@PutMapping
-		public ResponseEntity<Categoria> put (@RequestBody Categoria categoria){
-			return ResponseEntity.status(HttpStatus.OK).body(repository.save(categoria));
-		}
-		
-		@DeleteMapping
-		public void deleste (@PathVariable long id)
-		{
-			repository.deleteById(id);
-		}
-		
+
+	@Autowired
+	private CategoriaRepository repository;
+
+	@GetMapping
+	public ResponseEntity<List<Categoria>> getAll() {
+		return ResponseEntity.ok(repository.findAll());
 	}
+
+	@GetMapping("/{id}")
+	public ResponseEntity<Categoria> getById(@PathVariable long id) {
+		return repository.findById(id).map(resposta -> ResponseEntity.ok(resposta))
+				.orElse(ResponseEntity.notFound().build());
+	}
+
+	@PostMapping
+	public ResponseEntity<Categoria> post(@RequestBody Categoria categoria) {
+		return ResponseEntity.status(HttpStatus.CREATED).body(repository.save(categoria));
+	}
+
+	@PutMapping
+	public ResponseEntity<Categoria> put(@RequestBody Categoria categoria) {
+		return ResponseEntity.status(HttpStatus.OK).body(repository.save(categoria));
+	}
+
+	@DeleteMapping
+	public void deleste(@PathVariable long id) {
+		repository.deleteById(id);
+	}
+
+}
